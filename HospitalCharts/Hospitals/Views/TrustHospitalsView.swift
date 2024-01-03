@@ -20,9 +20,9 @@ struct TrustHospitalsView: View {
                         Text("Acute Hospitals Total Beds: 500")
                     }
                     Section{
-                            ForEach(1...10, id: \.self){ item in
-                                NavigationLink(value: item){
-                                    Text("Community Hospital \(item)")
+                            ForEach(communityHospitals){ hospital in
+                                NavigationLink(value: hospital){
+                                    Text(hospital.name)
                                 }
                                 
                             }
@@ -34,10 +34,10 @@ struct TrustHospitalsView: View {
                 }
                 .listStyle(.plain)
                 .navigationDestination(for: Acute.self){ hospital in
-                        Text(hospital.name)
+                        AcuteDetailView(acute: hospital)
                 }
-                .navigationDestination(for: Int.self){ item in
-                    Text("🏥 \(item)")
+                .navigationDestination(for: Community.self){ hospital in
+                    CommunityDetailView()
                 }
                                         
                 
