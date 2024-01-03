@@ -1,30 +1,52 @@
 import SwiftUI
 
 struct TrustHospitalsView: View {
+    
+    @State private var path = NavigationPath()
+    
     var body: some View {
-        NavigationStack{
-            List{
-                Section{
-                    Text("Acute Hospital 1")
-                    Text("Acute Hospital 2")
-                    Text("Acute Hospital 3")
-                }header: {
-                     Text("Acute Hospitals - Total Beds: 500")
-                }
+        NavigationStack(path: $path){
+           
                 
-                Section{
-                    Text("Community Hospital 1")
-                    Text("Community Hospital 2")
-                    Text("Community Hospital 3")
-                    Text("Community Hospital 4")
-                    Text("Community Hospital 5")
-                    Text("Community Hospital 6")
-                    Text("Community Hospital 7")
-                }header: {
-                    Text("Community Hospitals - Total Beds: 80")
+                List{
+                    Section{
+                        ForEach(acuteHospitals){ hospital in
+                            NavigationLink(value: hospital){
+                                    Text(hospital.name)
+                                       
+                            }
+                        }
+                    }header: {
+                        Text("Acute Hospitals Total Beds: 500")
+                    }
+                    Section{
+                            ForEach(1...10, id: \.self){ item in
+                                NavigationLink(value: item){
+                                    Text("Community Hospital \(item)")
+                                }
+                                
+                            }
+                        
+                    }header: {
+                        Text("Community Hospitals - Total Beds: 80")
+                    }
+                    
                 }
-            }
-            .listStyle(.plain)
+                .listStyle(.plain)
+                .navigationDestination(for: Acute.self){ hospital in
+                        Text(hospital.name)
+                }
+                .navigationDestination(for: Int.self){ item in
+                    Text("🏥 \(item)")
+                }
+                                        
+                
+                
+                
+                
+            
+            
+
             .navigationTitle("Trust Hospitals 🏥")
         }
     }
