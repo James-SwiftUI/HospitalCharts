@@ -13,6 +13,15 @@
 		1AF168312B45A2A3003231A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AF168302B45A2A3003231A2 /* Preview Assets.xcassets */; };
 		1AF168382B45A31D003231A2 /* TrustHospitalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF168372B45A31D003231A2 /* TrustHospitalsView.swift */; };
 		1AF1683A2B45A485003231A2 /* DepartmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF168392B45A485003231A2 /* DepartmentsView.swift */; };
+		1AF168472B45AB1E003231A2 /* HospitalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF168462B45AB1E003231A2 /* HospitalItem.swift */; };
+		1AF168492B45AB26003231A2 /* Acute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF168482B45AB26003231A2 /* Acute.swift */; };
+		1AF1684B2B45AB33003231A2 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1684A2B45AB33003231A2 /* Community.swift */; };
+		1AF1684E2B45ABBD003231A2 /* AcuteDepartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1684D2B45ABBD003231A2 /* AcuteDepartment.swift */; };
+		1AF168522B45B873003231A2 /* CommunityDepartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF168512B45B873003231A2 /* CommunityDepartment.swift */; };
+		1AF168542B45B8E4003231A2 /* AcuteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF168532B45B8E4003231A2 /* AcuteDetailView.swift */; };
+		1AF168562B45B8F1003231A2 /* CommunityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF168552B45B8F1003231A2 /* CommunityDetailView.swift */; };
+		1AF168582B45BAA4003231A2 /* WardChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF168572B45BAA4003231A2 /* WardChartView.swift */; };
+		1AF1685A2B45BB57003231A2 /* PatientLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF168592B45BB57003231A2 /* PatientLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +32,15 @@
 		1AF168302B45A2A3003231A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1AF168372B45A31D003231A2 /* TrustHospitalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustHospitalsView.swift; sourceTree = "<group>"; };
 		1AF168392B45A485003231A2 /* DepartmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsView.swift; sourceTree = "<group>"; };
+		1AF168462B45AB1E003231A2 /* HospitalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalItem.swift; sourceTree = "<group>"; };
+		1AF168482B45AB26003231A2 /* Acute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acute.swift; sourceTree = "<group>"; };
+		1AF1684A2B45AB33003231A2 /* Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
+		1AF1684D2B45ABBD003231A2 /* AcuteDepartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcuteDepartment.swift; sourceTree = "<group>"; };
+		1AF168512B45B873003231A2 /* CommunityDepartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDepartment.swift; sourceTree = "<group>"; };
+		1AF168532B45B8E4003231A2 /* AcuteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcuteDetailView.swift; sourceTree = "<group>"; };
+		1AF168552B45B8F1003231A2 /* CommunityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDetailView.swift; sourceTree = "<group>"; };
+		1AF168572B45BAA4003231A2 /* WardChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardChartView.swift; sourceTree = "<group>"; };
+		1AF168592B45BB57003231A2 /* PatientLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientLog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +137,9 @@
 			isa = PBXGroup;
 			children = (
 				1AF168372B45A31D003231A2 /* TrustHospitalsView.swift */,
+				1AF168532B45B8E4003231A2 /* AcuteDetailView.swift */,
+				1AF168552B45B8F1003231A2 /* CommunityDetailView.swift */,
+				1AF168572B45BAA4003231A2 /* WardChartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,6 +147,11 @@
 		1AF168432B45A6C0003231A2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1AF168462B45AB1E003231A2 /* HospitalItem.swift */,
+				1AF168482B45AB26003231A2 /* Acute.swift */,
+				1AF1684A2B45AB33003231A2 /* Community.swift */,
+				1AF168592B45BB57003231A2 /* PatientLog.swift */,
+				1AF1684C2B45ABAF003231A2 /* Enum */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,6 +169,15 @@
 				1AF168392B45A485003231A2 /* DepartmentsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1AF1684C2B45ABAF003231A2 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				1AF1684D2B45ABBD003231A2 /* AcuteDepartment.swift */,
+				1AF168512B45B873003231A2 /* CommunityDepartment.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +250,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AF168492B45AB26003231A2 /* Acute.swift in Sources */,
+				1AF1685A2B45BB57003231A2 /* PatientLog.swift in Sources */,
+				1AF168582B45BAA4003231A2 /* WardChartView.swift in Sources */,
+				1AF168562B45B8F1003231A2 /* CommunityDetailView.swift in Sources */,
+				1AF168522B45B873003231A2 /* CommunityDepartment.swift in Sources */,
 				1AF1682C2B45A2A2003231A2 /* ContentView.swift in Sources */,
 				1AF168382B45A31D003231A2 /* TrustHospitalsView.swift in Sources */,
+				1AF168542B45B8E4003231A2 /* AcuteDetailView.swift in Sources */,
 				1AF1683A2B45A485003231A2 /* DepartmentsView.swift in Sources */,
+				1AF168472B45AB1E003231A2 /* HospitalItem.swift in Sources */,
+				1AF1684B2B45AB33003231A2 /* Community.swift in Sources */,
+				1AF1684E2B45ABBD003231A2 /* AcuteDepartment.swift in Sources */,
 				1AF1682A2B45A2A2003231A2 /* HospitalChartsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
