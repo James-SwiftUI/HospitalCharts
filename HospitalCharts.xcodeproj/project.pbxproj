@@ -11,6 +11,8 @@
 		1AF1682C2B45A2A2003231A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1682B2B45A2A2003231A2 /* ContentView.swift */; };
 		1AF1682E2B45A2A3003231A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AF1682D2B45A2A3003231A2 /* Assets.xcassets */; };
 		1AF168312B45A2A3003231A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AF168302B45A2A3003231A2 /* Preview Assets.xcassets */; };
+		1AF168382B45A31D003231A2 /* TrustHospitalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF168372B45A31D003231A2 /* TrustHospitalsView.swift */; };
+		1AF1683A2B45A485003231A2 /* DepartmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF168392B45A485003231A2 /* DepartmentsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		1AF1682B2B45A2A2003231A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1AF1682D2B45A2A3003231A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AF168302B45A2A3003231A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1AF168372B45A31D003231A2 /* TrustHospitalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustHospitalsView.swift; sourceTree = "<group>"; };
+		1AF168392B45A485003231A2 /* DepartmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,11 @@
 		1AF168282B45A2A2003231A2 /* HospitalCharts */ = {
 			isa = PBXGroup;
 			children = (
+				1AF1683B2B45A5F2003231A2 /* Navigation */,
+				1AF1683E2B45A61F003231A2 /* Home */,
+				1AF168402B45A62E003231A2 /* Hospitals */,
+				1AF1683F2B45A628003231A2 /* Department */,
 				1AF168292B45A2A2003231A2 /* HospitalChartsApp.swift */,
-				1AF1682B2B45A2A2003231A2 /* ContentView.swift */,
 				1AF1682D2B45A2A3003231A2 /* Assets.xcassets */,
 				1AF1682F2B45A2A3003231A2 /* Preview Content */,
 			);
@@ -65,6 +72,77 @@
 				1AF168302B45A2A3003231A2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1AF1683B2B45A5F2003231A2 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		1AF1683E2B45A61F003231A2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1AF168412B45A6AC003231A2 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1AF1683F2B45A628003231A2 /* Department */ = {
+			isa = PBXGroup;
+			children = (
+				1AF168442B45A6D3003231A2 /* Model */,
+				1AF168452B45A6D8003231A2 /* Views */,
+			);
+			path = Department;
+			sourceTree = "<group>";
+		};
+		1AF168402B45A62E003231A2 /* Hospitals */ = {
+			isa = PBXGroup;
+			children = (
+				1AF168432B45A6C0003231A2 /* Model */,
+				1AF168422B45A6BA003231A2 /* Views */,
+			);
+			path = Hospitals;
+			sourceTree = "<group>";
+		};
+		1AF168412B45A6AC003231A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1AF1682B2B45A2A2003231A2 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1AF168422B45A6BA003231A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1AF168372B45A31D003231A2 /* TrustHospitalsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1AF168432B45A6C0003231A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1AF168442B45A6D3003231A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1AF168452B45A6D8003231A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1AF168392B45A485003231A2 /* DepartmentsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +216,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AF1682C2B45A2A2003231A2 /* ContentView.swift in Sources */,
+				1AF168382B45A31D003231A2 /* TrustHospitalsView.swift in Sources */,
+				1AF1683A2B45A485003231A2 /* DepartmentsView.swift in Sources */,
 				1AF1682A2B45A2A2003231A2 /* HospitalChartsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
