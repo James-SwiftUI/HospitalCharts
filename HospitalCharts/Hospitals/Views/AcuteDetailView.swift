@@ -4,16 +4,17 @@ struct AcuteDetailView: View {
     
     @State private var showWardCharts = false
     let acute: Acute
-    @State private var totalBeds: Int = 0
     @State private var wardName: String = ""
+    @State private var wardTotal: Int = 0
+    
     
     var body: some View {
         List{
         
             ForEach(acute.wards.sorted(by: { $0.key < $1.key }), id: \.key){ name, total in
                 Button{
-                    totalBeds = total
                     wardName = name
+                    wardTotal = total
                     showWardCharts.toggle()
                 }label: {
                     WardLink(name: name, total: total)
@@ -26,7 +27,7 @@ struct AcuteDetailView: View {
         .navigationTitle(acute.name)
         .navigationBarTitleDisplayMode(.inline)
         .fullScreenCover(isPresented: $showWardCharts){
-            WardChartView(wardName: $wardName, totalBeds: $totalBeds)
+            AcuteWardChartView(wardName: $wardName, wardTotal: $wardTotal)
         }
     }
 }
@@ -47,6 +48,7 @@ struct WardLink: View {
                 .font(.headline)
             LabeledContent("\(total) beds"){
                 Image(systemName: "bed.double.fill")
+                    .foregroundStyle(.secondary)
             }
         }
     }

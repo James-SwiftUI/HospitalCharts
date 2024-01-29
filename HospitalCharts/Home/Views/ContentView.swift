@@ -8,9 +8,9 @@ struct ContentView: View {
                     Label("Hospitals", systemImage: "plus.square")
                 }
             
-            DepartmentsView()
+            SummaryView()
                 .tabItem {
-                    Label("Department", systemImage: "chart.bar")
+                    Label("Summary", systemImage: "chart.bar")
                 }
         }
     }
@@ -19,3 +19,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+

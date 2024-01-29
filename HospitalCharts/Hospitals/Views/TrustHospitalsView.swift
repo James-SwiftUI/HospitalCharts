@@ -17,7 +17,8 @@ struct TrustHospitalsView: View {
                             }
                         }
                     }header: {
-                        Text("Acute Hospitals Total Beds: 500")
+                        HospitalHeaderView(name: "Acute", totalBeds: calculateTotalBeds(items: acuteHospitals))
+                            .padding(.horizontal, -20)
                     }
                     Section{
                             ForEach(communityHospitals){ hospital in
@@ -28,7 +29,8 @@ struct TrustHospitalsView: View {
                             }
                         
                     }header: {
-                        Text("Community Hospitals - Total Beds: 80")
+                        HospitalHeaderView(name: "Community", totalBeds: calculateTotalBeds(items: communityHospitals))
+                            .padding(.horizontal, -20)
                     }
                     
                 }
@@ -37,7 +39,7 @@ struct TrustHospitalsView: View {
                         AcuteDetailView(acute: hospital)
                 }
                 .navigationDestination(for: Community.self){ hospital in
-                    CommunityDetailView()
+                    CommunityDetailView(community: hospital)
                 }
                                         
                 
@@ -49,6 +51,17 @@ struct TrustHospitalsView: View {
 
             .navigationTitle("Trust Hospitals 🏥")
         }
+    }
+    
+    func calculateTotalBeds(items: [any HospitalItem])-> Int{
+        
+        var total = 0
+        for item in items{
+            total += item.totalBeds
+        }
+        
+        
+        return total
     }
 }
 
