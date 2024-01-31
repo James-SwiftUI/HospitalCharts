@@ -12,6 +12,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Summary", systemImage: "chart.bar")
                 }
+           
         }
     }
 }

@@ -5,6 +5,10 @@ struct CommunityDetailView: View {
     let community: Community
     
     @State private var showCommunityChartView = false
+    @State private var showCommunityBedsView = false
+    
+    @State private var wardName = ""
+    @State private var beds = 0
     
     var body: some View {
     
@@ -16,9 +20,6 @@ struct CommunityDetailView: View {
                             .fontWeight(.bold)
                             .underline()
                         HStack{
-                            
-                            
-                            
                             Text("\(community.wards.count) wards")
                                 
                             Spacer()
@@ -34,8 +35,16 @@ struct CommunityDetailView: View {
                 Section{
                     
                     ForEach(community.wards.sorted(by: { $0.key < $1.key }), id: \.key){ name, total in
-                            
-                        WardLink(name: name, total: total)
+                        Button{
+                            showCommunityBedsView.toggle()
+                            wardName = name
+                            beds = total
+                        }label:{
+                            WardLink(name: name, total: total)
+                                .foregroundStyle(.black)
+                        }
+                        
+                        
                     }
                       
                     
@@ -45,11 +54,7 @@ struct CommunityDetailView: View {
                 Section{
                 
                     ForEach(community.totalSeenByDepartment.keys.sorted(by: { $0.hashValue < $1.hashValue }), id: \.self) { key in
-                            
-                            
-                           
                         DepartmentLink(departmentName: key.displayName, totalSeen: community.totalSeenByDepartment[key] ?? 0)
-                            
                     }
                     
             
@@ -74,6 +79,9 @@ struct CommunityDetailView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .fullScreenCover(isPresented: $showCommunityChartView){
                     CommunityChartView(community: community)
+                }
+                .fullScreenCover(isPresented: $showCommunityBedsView){
+                    CommunityBedsChartView(wardName: $wardName, beds: $beds)
                 }
         }
     }

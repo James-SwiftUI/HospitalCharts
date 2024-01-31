@@ -37,23 +37,28 @@ struct SummaryView: View {
                     ForEach(allPatientsSeen.sorted(by: { graphType == .bar ? false : $0.total > $1.total })){ item in
                         if graphType == .bar{
                             
-                            BarMark(x: .value("Department", item.department.rawValue),
-                                        y: .value("Patients seen", Int(item.total)))
+                            BarMark(x: 
+                                    .value(
+                                        "Department",
+                                        item.department.rawValue),
+                                        y: .value(
+                                            "Patients seen",
+                                            Int(item.total)
+                                        )
+                                )
                                 .foregroundStyle(by: .value("All patients seen", item.department.rawValue))
                             
                             
                         }else{
                             
-                                SectorMark(angle: .value("All patients seen", item.total), innerRadius: .ratio(graphType == .donut ? 0.6 : 0),
+                            SectorMark(angle: .value("All patients seen", item.total), innerRadius: .ratio(graphType == .donut ? 0.6 : 0),
                                            angularInset: graphType == .donut ? 4 : 1)
                                 .cornerRadius(8)
                                 .foregroundStyle(by: .value("All patients seen", item.department.rawValue))
-                                //.opacity(barSelection == nil ? 1 : (barSelection == item.total ? 1: 0.4))
+                               
                             
                         }
                     }
-                    
-                    
                     if let barSelection{
                         RuleMark(x: .value("Department", barSelection))
                             .foregroundStyle(.gray.opacity(0.35))
