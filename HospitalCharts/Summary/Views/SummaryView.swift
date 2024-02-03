@@ -88,7 +88,7 @@ struct SummaryView: View {
                     barSelection = nil
                 }
             }
-            .navigationTitle("Trust Summary")
+            .navigationTitle("Trust Summary 📊")
         }
     }
     
