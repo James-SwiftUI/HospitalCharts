@@ -25,3 +25,9 @@ The hospitals in this app are fictitious data used for the charts is generated a
     <img alt="" src="./Photos/TrustSummaryPie.png", width="200"/>
    <!--  <img alt="" src="./Photos/CommunityDepartments.png", width="200"/> -->
 </p>
+
+<p align="center">
+    <img alt="" src="./Photos/AandEAttendance.png", width="200"/>
+    <img alt="" src="./Photos/AandELine.png", width="200"/>
+   <!--  <img alt="" src="./Photos/CommunityDepartments.png", width="200"/> -->
+</p>

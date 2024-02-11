@@ -12,7 +12,8 @@ struct ContentView: View {
                 .tabItem {
                     Label("Summary", systemImage: "chart.bar")
                 }
-            AandE()
+            AandEView()
+
                 .tabItem{
                     Label("Accident and Emergency", systemImage: "cross.fill")
                 }
