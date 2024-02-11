@@ -35,4 +35,5 @@ struct BarChartView: View {
 
 #Preview {
     BarChartView()
+        .frame(height: 400)
 }

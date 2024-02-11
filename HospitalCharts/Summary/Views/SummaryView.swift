@@ -136,6 +136,39 @@ struct SummaryView: View {
             barSelection = seen.0
         }
     }
+    
+    /// Finds the department based on a given range value by categorizing patients into ranges of values.
+    /// The `barSelection` is set to the department of the range in which the `rangeValue` falls.
+    ///
+    /// - Parameter rangeValue: The value for which the corresponding department is to be found.
+//    func findDepartmentValue(_ rangeValue: Double) {
+//        // Initialize the initial value for the range's start.
+//        var initialValue: Double = 0.0
+//
+//        // Convert the `allPatientsSeen` array into an array of tuples.
+//        // Each tuple consists of a department and a range of values corresponding to that department.
+//        let departmentRanges = allPatientsSeen
+//            .sorted(by: { $0.total > $1.total }) // Sort the patients by the total, descending.
+//            .compactMap { patientSeen -> (String, Range<Double>) in
+//                // Calculate the end of the current range.
+//                let rangeEnd = initialValue + patientSeen.total
+//                
+//                // Create a tuple of the department's raw value and the range it covers.
+//                let tuple = (patientSeen.department.rawValue, initialValue..<rangeEnd)
+//                
+//                // Update `initialValue` for the next range.
+//                initialValue = rangeEnd
+//                
+//                return tuple
+//            }
+//        
+//        // Find the first department range that contains the `rangeValue`.
+//        if let matchingDepartment = departmentRanges.first(where: { $0.1.contains(rangeValue) }) {
+//            // Set the `barSelection` to the department found.
+//            barSelection = matchingDepartment.0
+//        }
+//    }
+
 }
 
 #Preview {

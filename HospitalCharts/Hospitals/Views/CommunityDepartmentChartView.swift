@@ -1,7 +1,7 @@
 import SwiftUI
 import Charts
 
-struct CommunityChartView: View {
+struct CommunityDepartmentChartView: View {
     
     @Environment(\.dismiss) var dismiss
     @State private var actualName: CommunityDepartment?
@@ -89,5 +89,5 @@ struct CommunityChartView: View {
 }
 
 #Preview {
-    CommunityChartView(community: .example)
+    CommunityDepartmentChartView(community: .example)
 }

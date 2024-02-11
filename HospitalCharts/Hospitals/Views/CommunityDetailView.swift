@@ -78,7 +78,7 @@ struct CommunityDetailView: View {
                 .navigationTitle("Community Hosptial")
                 .navigationBarTitleDisplayMode(.inline)
                 .fullScreenCover(isPresented: $showCommunityChartView){
-                    CommunityChartView(community: community)
+                    CommunityDepartmentChartView(community: community)
                 }
                 .fullScreenCover(isPresented: $showCommunityBedsView){
                     CommunityBedsChartView(wardName: $wardName, beds: $beds)

@@ -1,5 +1,5 @@
 import SwiftUI
-import Charts 
+import Charts
 struct CommunityBedsChartView: View {
     
     @Environment(\.dismiss) var dismiss
