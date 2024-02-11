@@ -40,7 +40,7 @@ enum AttendanceType: String, CaseIterable, Identifiable{
         case .helicopter:
             .red
         case .walkin:
-            .yellow
+            .orange
         case .police:
             .blue
         }
@@ -55,7 +55,7 @@ enum AttendanceType: String, CaseIterable, Identifiable{
         case .helicopter:
             "Red"
         case .walkin:
-            "Yellow"
+            "Orange"
         case .police:
             "Blue"
         }

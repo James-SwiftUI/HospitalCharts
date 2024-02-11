@@ -18,7 +18,7 @@ struct AttendanceBarChartView: View {
                 }
                 .chartLegend(.hidden)
                 .chartForegroundStyleScale([
-                    "Green": .green, "Red": .red, "Blue": .blue, "Yellow": .yellow,
+                    "Green": .green, "Red": .red, "Blue": .blue, "Orange": .orange,
                 ])
                 .frame(height: 400)
                 ChartLegend()
