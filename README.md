@@ -8,7 +8,7 @@ The hospitals in this app are fictitious data used for the charts is generated a
 - Hospitals Wards Stats
 - Departments overview number of patients seen
 
-### Home Screen & Acute Hosptials Screens
+## Home Screen & Acute Hosptials Screens
 
 <p align="center">
     <img alt="Both Acute and community hospitals are selectable by trust total number of beds are listed" src="./Photos/Home.png", width="200"/>
@@ -16,7 +16,7 @@ The hospitals in this app are fictitious data used for the charts is generated a
     <img alt="An acute ward admissions and discharges of patients for days in the week. A bar for Admitted and A bar for Discharged. A pie chart displays the statistics for the week." src="./Photos/AcuteChart.png", width="200"/>
 </p>
 
-### Community Hospitals Screens
+## Community Hospitals Screens
 
 <p align="center">
     <img alt="The wards are listed which goes to community beds view" src="./Photos/CommunityDetail.png", width="200"/>
@@ -24,7 +24,7 @@ The hospitals in this app are fictitious data used for the charts is generated a
     <img alt="A bar chart of each department and the number of patients seen by week." src="./Photos/CommunityDepartments.png", width="200"/>
 </p>
 
-### Summary of the Trust Screen
+## Summary of the Trust Screen
 
 <p align="center">
     <img alt="" src="./Photos/TrustSummaryBar.png", width="200"/>

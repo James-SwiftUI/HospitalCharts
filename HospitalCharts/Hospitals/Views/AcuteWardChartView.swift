@@ -14,7 +14,6 @@ struct AcuteWardChartView: View {
     var body: some View {
         NavigationStack{
             ScrollView{
-                
                 Section{
                     Chart(admissionsAndDischarges){ item in
                         BarMark(x: .value("Days", item.theDay), y: .value("Quantity", item.actual))
@@ -33,8 +32,6 @@ struct AcuteWardChartView: View {
                         .font(.title3)
                         .fontWeight(.semibold)
                 }
-                
-                
                 Section{
                     Chart{
                         SectorMark(angle: .value("Admitted",totalPatientsByWeek(inOrOut: "In")))
@@ -83,6 +80,7 @@ struct AcuteWardChartView: View {
                 
                 
             }
+            .padding(.top, 20)
             .navigationTitle("\(wardName) - \(wardTotal) Total Beds")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar{
@@ -92,7 +90,7 @@ struct AcuteWardChartView: View {
                     }label: {
                         Label("Close", systemImage: "x.circle.fill")
                     }
-                    .imageScale(.large)
+                    
                 }
             }
         }

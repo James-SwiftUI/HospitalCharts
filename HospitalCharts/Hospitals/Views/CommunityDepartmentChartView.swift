@@ -32,6 +32,7 @@ struct CommunityDepartmentChartView: View {
                     }
                 }
                 .frame(height: 400)
+                .padding(10)
                 .chartLegend(.hidden)
                 .chartXSelection(value: $selectedDepartment)
                 .onChange(of: selectedDepartment){ oldValue, newValue in
@@ -50,6 +51,7 @@ struct CommunityDepartmentChartView: View {
 
                     }
                     .padding(4)
+                    .padding(.horizontal, 8)
                     .padding(.top, 10)
                     
                     

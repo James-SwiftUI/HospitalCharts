@@ -40,8 +40,10 @@ struct AandEView: View {
                     .aspectRatio(1, contentMode: .fit)
                     .frame(height: 400)
                 }header: {
+                    Divider()
                     Text("Total Attendance By year")
                         .fontWeight(.semibold)
+                    Divider()
                 }
                 
                 Section{
@@ -49,8 +51,10 @@ struct AandEView: View {
                     
                     
                 }header: {
+                    Divider()
                     Text("Attendance Type")
                         .fontWeight(.semibold)
+                    Divider()
                 }
                 
                 
