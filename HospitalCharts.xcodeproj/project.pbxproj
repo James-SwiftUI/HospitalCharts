@@ -11,11 +11,12 @@
 		1A1417432B6EC16F007EFCB7 /* AandEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1417422B6EC16F007EFCB7 /* AandEView.swift */; };
 		1A26B6FA2B6FD36B004F3AB7 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26B6F92B6FD36B004F3AB7 /* SwiftUIView.swift */; };
 		1A26B8B22B6A626C0022B97F /* CommunityBedsChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26B8B12B6A626C0022B97F /* CommunityBedsChartView.swift */; };
-		1A26B8B62B6A74410022B97F /* DonutChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26B8B52B6A74410022B97F /* DonutChartView.swift */; };
+		1A26B8B62B6A74410022B97F /* SectorChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26B8B52B6A74410022B97F /* SectorChartView.swift */; };
 		1A26B8B82B6A75610022B97F /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26B8B72B6A75610022B97F /* BarChartView.swift */; };
 		1A32E45D2B67F5F800AE030B /* CommunityDepartmentChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A32E45C2B67F5F800AE030B /* CommunityDepartmentChartView.swift */; };
 		1A32E4612B67FFD400AE030B /* HospitalHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A32E4602B67FFD400AE030B /* HospitalHeaderView.swift */; };
 		1A32E4632B6820D200AE030B /* DepartmentLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A32E4622B6820D200AE030B /* DepartmentLink.swift */; };
+		1A6C7E9A2B7FDE4C000D14DA /* TestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C7E992B7FDE4C000D14DA /* TestingView.swift */; };
 		1AF1682A2B45A2A2003231A2 /* HospitalChartsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF168292B45A2A2003231A2 /* HospitalChartsApp.swift */; };
 		1AF1682C2B45A2A2003231A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1682B2B45A2A2003231A2 /* ContentView.swift */; };
 		1AF1682E2B45A2A3003231A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AF1682D2B45A2A3003231A2 /* Assets.xcassets */; };
@@ -40,11 +41,12 @@
 		1A1417422B6EC16F007EFCB7 /* AandEView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AandEView.swift; sourceTree = "<group>"; };
 		1A26B6F92B6FD36B004F3AB7 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		1A26B8B12B6A626C0022B97F /* CommunityBedsChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityBedsChartView.swift; sourceTree = "<group>"; };
-		1A26B8B52B6A74410022B97F /* DonutChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChartView.swift; sourceTree = "<group>"; };
+		1A26B8B52B6A74410022B97F /* SectorChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorChartView.swift; sourceTree = "<group>"; };
 		1A26B8B72B6A75610022B97F /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		1A32E45C2B67F5F800AE030B /* CommunityDepartmentChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDepartmentChartView.swift; sourceTree = "<group>"; };
 		1A32E4602B67FFD400AE030B /* HospitalHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalHeaderView.swift; sourceTree = "<group>"; };
 		1A32E4622B6820D200AE030B /* DepartmentLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentLink.swift; sourceTree = "<group>"; };
+		1A6C7E992B7FDE4C000D14DA /* TestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingView.swift; sourceTree = "<group>"; };
 		1AF168262B45A2A2003231A2 /* HospitalCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HospitalCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF168292B45A2A2003231A2 /* HospitalChartsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalChartsApp.swift; sourceTree = "<group>"; };
 		1AF1682B2B45A2A2003231A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -214,7 +216,8 @@
 			children = (
 				1AF168392B45A485003231A2 /* SummaryView.swift */,
 				1A26B8B72B6A75610022B97F /* BarChartView.swift */,
-				1A26B8B52B6A74410022B97F /* DonutChartView.swift */,
+				1A26B8B52B6A74410022B97F /* SectorChartView.swift */,
+				1A6C7E992B7FDE4C000D14DA /* TestingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -316,12 +319,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A32E4612B67FFD400AE030B /* HospitalHeaderView.swift in Sources */,
+				1A6C7E9A2B7FDE4C000D14DA /* TestingView.swift in Sources */,
 				1A26B8B82B6A75610022B97F /* BarChartView.swift in Sources */,
 				1AF473992B78F562000746C8 /* AccidentAndEmergency.swift in Sources */,
 				1A26B6FA2B6FD36B004F3AB7 /* SwiftUIView.swift in Sources */,
 				1A32E4632B6820D200AE030B /* DepartmentLink.swift in Sources */,
 				1AF168492B45AB26003231A2 /* Acute.swift in Sources */,
-				1A26B8B62B6A74410022B97F /* DonutChartView.swift in Sources */,
+				1A26B8B62B6A74410022B97F /* SectorChartView.swift in Sources */,
 				1A0C3C0B2B7912D0003C4DB6 /* Constants.swift in Sources */,
 				1A32E45D2B67F5F800AE030B /* CommunityDepartmentChartView.swift in Sources */,
 				1AF4739B2B790338000746C8 /* AttendanceBarChartView.swift in Sources */,

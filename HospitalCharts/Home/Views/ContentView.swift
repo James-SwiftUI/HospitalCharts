@@ -8,7 +8,7 @@ struct ContentView: View {
                     Label("Hospitals", systemImage: "list.bullet.clipboard")
                 }
             
-            SummaryView()
+            TestingView()
                 .tabItem {
                     Label("Summary", systemImage: "chart.bar")
                 }
