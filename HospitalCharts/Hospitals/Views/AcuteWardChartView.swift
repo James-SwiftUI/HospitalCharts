@@ -71,8 +71,9 @@ struct AcuteWardChartView: View {
                                     .fontWeight(.semibold)
                             }
                     }
+                    .padding()
                     .frame(height: 300)
-                    
+                    .background(RoundedRectangle(cornerRadius: 12).fill(Color(.secondarySystemBackground)))
                     
                     HStack{
                         Label("Admitted", systemImage: "square.fill")
@@ -80,15 +81,8 @@ struct AcuteWardChartView: View {
                         Spacer()
                         Label("Discharged", systemImage: "square.fill")
                             .foregroundStyle(.blue)
-                        
-                        
                     }
                     .padding(.horizontal)
-                    
-                    
-                    
-                    
-                    
                 }header: {
                     
                     HStack{
@@ -98,14 +92,9 @@ struct AcuteWardChartView: View {
                         Text("Total Patients Admitted & Discharged")
                             .fontWeight(.semibold)
                     }
-                    
                 }
                 .padding(.top)
-                
-            
-                
-                
-                
+                .padding(.horizontal)
             }
             .padding(.top, 20)
             .navigationTitle("\(wardName) - \(wardTotal) Total Beds")
@@ -130,7 +119,6 @@ struct AcuteWardChartView: View {
         var wards = [PatientLog]()
         let range = 1...7
     
-        
         
         for day in range{
             

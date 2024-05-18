@@ -11,7 +11,6 @@ struct CommunityBedsChartView: View {
     
     @State var patientStay: [PatientStay] = loadPatientStay()
     
-//    
     var selectedBed: PatientStay?{
         guard let selectedBedValue else { return nil }
         return patientStay.first{
@@ -53,9 +52,9 @@ struct CommunityBedsChartView: View {
                         .fontWeight(.semibold)
                 }
                 Section{
-                    if (selectedBedValue != nil){
+                    if let selectedBedValue{
                         VStack(alignment: .leading, spacing: 12){
-                            Label("\(selectedBedValue ?? "0")", systemImage: "bed.double.fill")
+                            Label("\(selectedBedValue)", systemImage: "bed.double.fill")
                             Label(selectedBed?.patientName ?? "", systemImage: "person.fill")
                             Label("Stayed: \(selectedBed?.nightsStayed ?? 0) nights", systemImage: "moon.fill")
                           
