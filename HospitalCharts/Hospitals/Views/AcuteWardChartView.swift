@@ -1,6 +1,8 @@
 import SwiftUI
 import Charts
 
+// Admissions and Discharges By Day
+
 struct AcuteWardChartView: View {
     
     @Environment(\.dismiss) var dismiss
@@ -25,13 +27,32 @@ struct AcuteWardChartView: View {
                             .foregroundStyle(item.action == .patientsIn ? .green : .blue)
                     }
                     .frame(height: 400)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 12).fill(Color(.secondarySystemBackground)))
+                    .chartYAxis{
+                        
+                    }
+                    .chartXAxis{
+                        AxisMarks{
+                            AxisValueLabel()
+                             
+                        }
+                    }
                     
                     Spacer()
                 }header: {
-                    Text("Admissions and Discharges By Day")
-                        .font(.title3)
-                        .fontWeight(.semibold)
+                    HStack{
+                        Image(systemName: "cross.circle")
+                            .symbolRenderingMode(.multicolor)
+                            .imageScale(.large)
+                        Text("Admissions and Discharges By Day")
+                            .fontWeight(.semibold)
+                    }
+                    
                 }
+               
+                .padding()
+        
                 Section{
                     Chart{
                         SectorMark(angle: .value("Admitted",totalPatientsByWeek(inOrOut: "In")))
@@ -69,9 +90,15 @@ struct AcuteWardChartView: View {
                     
                     
                 }header: {
-                    Text("Weeekly Patients Admitted & Discharged")
-                        .font(.title3)
-                        .fontWeight(.semibold)
+                    
+                    HStack{
+                        Image(systemName: "calendar")
+                            .symbolRenderingMode(.multicolor)
+                            .imageScale(.large)
+                        Text("Total Patients Admitted & Discharged")
+                            .fontWeight(.semibold)
+                    }
+                    
                 }
                 .padding(.top)
                 

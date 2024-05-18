@@ -47,7 +47,7 @@ struct CommunityDepartmentChartView: View {
                         Text("\(actualName.displayName) Department")
                                     .font(.title3)
                                     .underline()
-                        Text(actualName.description)
+                        
 
                     }
                     .padding(4)

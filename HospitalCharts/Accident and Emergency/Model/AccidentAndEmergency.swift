@@ -4,10 +4,11 @@ import SwiftUI
 
 struct AccidentAndEmergency: Identifiable{
     var id: String{
-        month
+        month + year
     }
     var totalNumber: Int
     var month: String
+    var year: String
 }
 
 

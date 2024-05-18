@@ -1,6 +1,6 @@
 import Foundation
 
-let monthSelection = ["Oct", "Nov", "Dec"]
+let monthSelection = ["Mar", "Apr", "May"]
 
 
 let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]

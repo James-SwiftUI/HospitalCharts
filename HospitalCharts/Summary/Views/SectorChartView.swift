@@ -80,7 +80,7 @@ struct SectorChartView: View {
     }
     private func getSelectedDepartment(value: Int){
         var culmulativeTotal = 0
-        let department = allPatientsSeen.first { department in
+        _ = allPatientsSeen.first { department in
             culmulativeTotal += Int(department.total)
             if value <= culmulativeTotal{
                 selectedDepartment = department

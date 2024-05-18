@@ -8,8 +8,12 @@ struct AcuteDetailView: View {
     @State private var wardTotal: Int = 0
     
     
+    
     var body: some View {
         List{
+            VStack{
+                Text("Hospital Total Beds: **\(acute.totalBeds)**")
+            }
         
             ForEach(acute.wards.sorted(by: { $0.key < $1.key }), id: \.key){ name, total in
                 Button{

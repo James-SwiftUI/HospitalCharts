@@ -10,18 +10,18 @@ struct TrustHospitalsView: View {
                 
                 List{
                     Section{
-                        ForEach(acuteHospitals){ hospital in
+                        ForEach(MockData.acuteHospitals){ hospital in
                             NavigationLink(value: hospital){
                                     Text(hospital.name)
                                        
                             }
                         }
                     }header: {
-                        HospitalHeaderView(name: "Acute", totalBeds: calculateTotalBeds(items: acuteHospitals))
+                        HospitalHeaderView(name: "Acute", totalBeds: calculateTotalBeds(items: MockData.acuteHospitals))
                             .padding(.horizontal, -20)
                     }
                     Section{
-                            ForEach(communityHospitals){ hospital in
+                        ForEach(MockData.communityHospitals){ hospital in
                                 NavigationLink(value: hospital){
                                     Text(hospital.name)
                                 }
@@ -29,7 +29,7 @@ struct TrustHospitalsView: View {
                             }
                         
                     }header: {
-                        HospitalHeaderView(name: "Community", totalBeds: calculateTotalBeds(items: communityHospitals))
+                        HospitalHeaderView(name: "Community", totalBeds: calculateTotalBeds(items: MockData.communityHospitals))
                             .padding(.horizontal, -20)
                     }
                     

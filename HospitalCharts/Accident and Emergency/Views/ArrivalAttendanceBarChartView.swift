@@ -1,10 +1,14 @@
 import SwiftUI
 import Charts
 
-struct AttendanceBarChartView: View {
+//Arrival in A & E 
 
 
-    
+struct ArrivalAttendanceBarChartView: View {
+
+
+    let showTheLegend: Bool
+    let frameHeight: CGFloat
     var patientAttendance: [Attendance] = generateData()
    
     var body: some View {
@@ -20,8 +24,11 @@ struct AttendanceBarChartView: View {
                 .chartForegroundStyleScale([
                     "Green": .green, "Red": .red, "Blue": .blue, "Orange": .orange,
                 ])
-                .frame(height: 400)
-                ChartLegend()
+                .frame(height: frameHeight)
+                if showTheLegend{
+                    ChartLegend()
+                }
+                
                 Spacer()
             }
             .navigationTitle("Arrival in A & E 🚑")
@@ -66,7 +73,7 @@ struct AttendanceBarChartView: View {
 
 
 #Preview {
-    AttendanceBarChartView()
+    ArrivalAttendanceBarChartView(showTheLegend: true, frameHeight: 400)
 }
 
 
