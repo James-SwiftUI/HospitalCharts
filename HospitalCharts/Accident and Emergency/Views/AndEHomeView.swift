@@ -43,7 +43,7 @@ struct AndEHomeView: View {
                     .padding(.vertical, 8)
                     VStack(alignment: .leading, spacing: 20){
                         NavigationLink{
-                            Text("EMPTY VIEW!!!")
+                            AandEAttendanceCurrentView()
                         }label: {
                             
                             if hospitalChoice == 0{
@@ -63,9 +63,6 @@ struct AndEHomeView: View {
                             }
                         }
                         ThumbnailAttendanceView()
-//                        RoundedRectangle(cornerRadius: 12)
-//                            .foregroundStyle(.gray.opacity(0.3))
-//                            )
                     }
                     
                 }header: {
@@ -75,21 +72,57 @@ struct AndEHomeView: View {
                 }
                 
                 Section{
-                    VStack{
-                        AttendanceBarChartView(showTheLegend: false, frameHeight: 200)
-                            .chartXAxis{}
-                            .chartYAxis{}
-                            .background(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .foregroundStyle(.gray.opacity(0.3))
-                            )
-                        
+                    
+                    NavigationLink{
+                        AandEAttendanceByYearandMonth(isThumbalView: false, frameHeight: 400.0)
+                    }label: {
+                        VStack(alignment: .leading){
+                            AandEAttendanceByYearandMonth(isThumbalView: true, frameHeight: 320.0)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .foregroundStyle(.gray.opacity(0.3))
+                                    
+                                )
+                                .chartXAxis(.hidden)
+                                .chartYAxis(.hidden)
+                            Text("View historical attendance by month")
+                                .font(.caption)
+                                .padding(.horizontal, 12)
+                                .padding(.top, 12)
+                        }
+                        .padding()
                     }
                     
+                    
+                    NavigationLink{
+                        ArrivalAttendanceBarChartView(showTheLegend: true, frameHeight: 400)
+                            
+                    }label: {
+                        VStack(alignment: .leading){
+                            ArrivalAttendanceBarChartView(showTheLegend: false, frameHeight: 200)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .foregroundStyle(.gray.opacity(0.3))
+                                    
+                                )
+                                .chartXAxis{}
+                                .chartYAxis{}
+                               
+                            
+                            Text("View mode of arrival")
+                                .font(.caption)
+                                .padding(.horizontal, 12)
+                                .padding(.top, 12)
+                        }
+                        .padding()
+                    }
+                    
+                    
+                    
+                    
+                    
                 }header: {
-                    Text("Arrival")
-                }footer: {
-                    Text("View Mode of Arrival")
+                    Text("Historical Attendance")
                 }
                 
                 

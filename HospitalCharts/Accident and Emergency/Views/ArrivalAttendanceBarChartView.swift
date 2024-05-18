@@ -8,9 +8,8 @@ struct ArrivalAttendanceBarChartView: View {
 
 
     let showTheLegend: Bool
-    let frameHeight: CGFloat
     var patientAttendance: [Attendance] = generateData()
-   
+    var frameHeight: CGFloat
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
@@ -60,20 +59,13 @@ struct ArrivalAttendanceBarChartView: View {
             }
             
         }
-        
-        
-            
-        
-        
-        
-        
         return patientAttendance
     }
 }
 
 
 #Preview {
-    ArrivalAttendanceBarChartView(showTheLegend: true, frameHeight: 400)
+    ArrivalAttendanceBarChartView(showTheLegend: true, frameHeight: 400.0)
 }
 
 

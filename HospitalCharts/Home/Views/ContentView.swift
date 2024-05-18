@@ -12,7 +12,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Summary", systemImage: "chart.bar")
                 }
-            AandEAttendanceByYear()
+            AndEHomeView(hostpitalType: "Red Robin")
 
                 .tabItem{
                     Label("Accident and Emergency", systemImage: "cross.fill")
