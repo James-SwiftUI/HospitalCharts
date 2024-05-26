@@ -20,6 +20,9 @@ struct BarChartView: View {
                 ForEach(MockData.allPatientsSeen){ item in
                     BarMark(x: .value("Department", item.department.rawValue), y: .value("Patients Seen", item.total))
                       .foregroundStyle(by: .value("All patients seen", item.department.rawValue))
+                      .annotation(position: .top){
+                          Text("\(item.total)")
+                      }
                 }
                 
             }

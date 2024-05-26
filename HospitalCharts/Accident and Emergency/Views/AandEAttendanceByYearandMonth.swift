@@ -9,13 +9,12 @@ struct AandEAttendanceByYearandMonth: View {
     @State private var year: String = "2020"
     let years: [String] = ["2020", "2021", "2022", "2023"]
     
-    @State private var selectedMonthOnChart: String?
+    @State private var selectedMonthOnChart: Date?
     
     var selectedMonthTotal: AccidentAndEmergency?{
         guard let selectedMonthOnChart else { return nil }
-        
         return SelectedYearArray().first{
-            $0.month == selectedMonthOnChart
+            Calendar.current.isDate(selectedMonthOnChart, inSameDayAs: $0.date)
         }
         
     }
@@ -34,20 +33,25 @@ struct AandEAttendanceByYearandMonth: View {
                             }
                         }
                         .pickerStyle(.palette)
+                        .padding(.bottom, 60)
                     }
                     
                     
                     Chart{
                         
                         if let selectedMonthTotal{
-                            RuleMark(x: .value("Selected Month", selectedMonthTotal.month))
+                            RuleMark(x: .value("Selected Month", selectedMonthTotal.date, unit: .day))
                                 .foregroundStyle(Color.secondary.opacity(0.3))
                                 .offset(y: -10)
+                                .annotation(position: .top,
+                                            spacing: 0,
+                                            overflowResolution: .init(x: .fit(to: .chart), y: .disabled)){ annotationView }
+                                .zIndex(100)
                         }
                         
                         ForEach(SelectedYearArray()){ visits in
                             Plot{
-                                LineMark(x: .value("Month", visits.month), y: .value("Patients", visits.totalNumber))
+                                LineMark(x: .value("Month", visits.date, unit: .day), y: .value("Patients", visits.totalNumber))
                                     .symbol(.circle)
                                 
                             }
@@ -59,15 +63,20 @@ struct AandEAttendanceByYearandMonth: View {
                         
                         
                     }
+                    .padding(.horizontal)
                     .chartXSelection(value: $selectedMonthOnChart)
-                    .chartYScale(domain: .automatic(includesZero: false))
-                    .chartYAxis{
-                        AxisMarks(values: [250, 350, 450, 550]){
-                            AxisGridLine()
-                        }
+                    .chartXAxis{
+                        AxisMarks{}
                     }
+                    .chartYScale(domain: .automatic(includesZero: false))
+//                    .chartYAxis{
+//                        AxisMarks(values: [250, 350, 450, 550]){
+//                            AxisGridLine()
+//                        }
+//                    }
                     .aspectRatio(1, contentMode: .fit)
                     .frame(height: frameHeight)
+                    .padding(.horizontal, 20)
                 }header: {
                     if !isThumbalView{
                         Divider()
@@ -75,26 +84,25 @@ struct AandEAttendanceByYearandMonth: View {
                             .fontWeight(.semibold)
                         Divider()
                     }
-                    
-                    VStack{
-                        if let selectedMonthTotal{
-                           
-                                VStack(alignment: .leading){
-                                    Text("\(selectedMonthOnChart ?? "")")
-                                    Text(selectedMonthTotal.year)
-                                    Text(selectedMonthTotal.id)
-                                    Text("\(selectedMonthTotal.totalNumber)")
-                                }
-                                
-                        }
-                    }
-                    
-                    
-                    
                 }
             }
         }
         
+       
+        
+    }
+    
+    var annotationView: some View{
+        VStack(alignment: .leading){
+            Text("\(selectedMonthTotal?.totalNumber ?? 0) Patients")
+            HStack{
+                Text(selectedMonthTotal?.date ?? .now, format: .dateTime.month())
+                Text(selectedMonthTotal?.date ?? .now, format: .dateTime.year())
+            }
+        }
+        .padding(12)
+        .background(.ultraThickMaterial,in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+        .foregroundStyle(.white.opacity(0.8))
     }
     
     

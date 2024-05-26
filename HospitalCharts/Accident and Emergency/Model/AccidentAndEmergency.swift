@@ -3,12 +3,11 @@ import SwiftUI
 
 
 struct AccidentAndEmergency: Identifiable{
-    var id: String{
-        month + year
-    }
+    var id = UUID()
+    
+    
     var totalNumber: Int
-    var month: String
-    var year: String
+    var date: Date
 }
 
 
