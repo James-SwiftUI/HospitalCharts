@@ -7,8 +7,6 @@ struct ThumbnailAttendanceView: View {
     
     var body: some View {
         Chart{
-            
-            
             ForEach(randomValues, id: \.self){ random in
                 BarMark(x: .value("Hour", "\(random)"), y: .value("Patients", random))
             }
@@ -23,19 +21,7 @@ struct ThumbnailAttendanceView: View {
         .padding(.horizontal)
         .chartXAxis{}
         .chartYAxis{}
-        
-        
     }
-    
-//    static func generateValues(){
-//        
-//        
-//        ForEach(1...10, id: \.self){ num in
-//            let random = Int.random(in: 4...14)
-//            randomValues.append(random)
-//        }
-//    }
-    
 }
 
 #Preview {

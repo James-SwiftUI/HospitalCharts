@@ -37,20 +37,30 @@ struct AandEAttendanceByYearandMonth: View {
                     }
                     
                     
-                    Chart(SelectedYearArray()){ visits in
+                    Chart{
                         
-                        Plot{
-                            LineMark(x: .value("Month", visits.month), y: .value("Patients", visits.totalNumber))
-                                .symbol(.circle)
-                            
+                        if let selectedMonthTotal{
+                            RuleMark(x: .value("Selected Month", selectedMonthTotal.month))
+                                .foregroundStyle(Color.secondary.opacity(0.3))
+                                .offset(y: -10)
                         }
-                        .interpolationMethod(.catmullRom)
-                        .lineStyle(StrokeStyle(lineWidth: 3))
+                        
+                        ForEach(SelectedYearArray()){ visits in
+                            Plot{
+                                LineMark(x: .value("Month", visits.month), y: .value("Patients", visits.totalNumber))
+                                    .symbol(.circle)
+                                
+                            }
+                            .interpolationMethod(.catmullRom)
+                            .lineStyle(StrokeStyle(lineWidth: 3))
+                        }
+                        
+                        
                         
                         
                     }
-                    .chartYScale(domain: .automatic(includesZero: false))
                     .chartXSelection(value: $selectedMonthOnChart)
+                    .chartYScale(domain: .automatic(includesZero: false))
                     .chartYAxis{
                         AxisMarks(values: [250, 350, 450, 550]){
                             AxisGridLine()
@@ -65,6 +75,21 @@ struct AandEAttendanceByYearandMonth: View {
                             .fontWeight(.semibold)
                         Divider()
                     }
+                    
+                    VStack{
+                        if let selectedMonthTotal{
+                           
+                                VStack(alignment: .leading){
+                                    Text("\(selectedMonthOnChart ?? "")")
+                                    Text(selectedMonthTotal.year)
+                                    Text(selectedMonthTotal.id)
+                                    Text("\(selectedMonthTotal.totalNumber)")
+                                }
+                                
+                        }
+                    }
+                    
+                    
                     
                 }
             }

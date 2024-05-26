@@ -7,8 +7,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Hospitals", systemImage: "list.bullet.clipboard")
                 }
-            
-            TestingView()
+            HomeSummaryView()
                 .tabItem {
                     Label("Summary", systemImage: "chart.bar")
                 }
@@ -17,11 +16,6 @@ struct ContentView: View {
                 .tabItem{
                     Label("Accident and Emergency", systemImage: "cross.fill")
                 }
-//            DonutChartView()
-//                .tabItem{
-//                    Label("Donut 🍩", systemImage: "circle")
-//                }
-           
         }
     }
 }

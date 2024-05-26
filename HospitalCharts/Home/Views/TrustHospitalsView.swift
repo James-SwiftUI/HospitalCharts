@@ -41,26 +41,15 @@ struct TrustHospitalsView: View {
                 .navigationDestination(for: Community.self){ hospital in
                     CommunityDetailView(community: hospital)
                 }
-                                        
-                
-                
-                
-                
-            
-            
-
             .navigationTitle("Trust Hospitals 🏥")
         }
     }
     
     func calculateTotalBeds(items: [any HospitalItem])-> Int{
-        
         var total = 0
         for item in items{
             total += item.totalBeds
         }
-        
-        
         return total
     }
 }

@@ -9,25 +9,18 @@ struct SectorChartView: View {
     @State private var selectedDepartment: PatientsSeen?
     
     @Binding var graphType: GraphType
-    let allPatientsSeen: [PatientsSeen] = [
-        .init(total: 325, department: .opthalmology),
-        .init(total: 255, department: .cardiology),
-        .init(total: 121, department: .gastroerolgy),
-        .init(total: 89, department: .neurology),
-        
-        .init(total: 73, department: .surgery)
-    ]
+    
     
   
+    
    
     
     var body: some View {
             
         NavigationStack {
             Chart{
-                ForEach(allPatientsSeen.sorted(by: {  $0.total > $1.total })){ item in
-                    
-                    SectorMark(angle: .value("All patients seen", item.total), 
+                ForEach(MockData.allPatientsSeen.sorted(by: {  $0.total > $1.total })){ item in
+                    SectorMark(angle: .value("All patients seen", item.total),
                                innerRadius: .ratio(graphType == .donut ? 0.6 : 0),
                                outerRadius: selectedDepartment?.department.rawValue == item.department.rawValue ? 175 : 150,
                                angularInset: graphType == .donut ? 4 : 1
@@ -44,7 +37,7 @@ struct SectorChartView: View {
                     
                     print(newValue)
                     withAnimation {
-                        getSelectedDepartment(value: newValue)
+                        //getSelectedDepartment(value: newValue)
                         //print(selectedDepartment?.department.rawValue)
                     }
                 }
@@ -64,30 +57,13 @@ struct SectorChartView: View {
                             }
                             .font(.system(.headline, design: .rounded))
                             .foregroundStyle(.secondary)
-                            
-                            
-                            
                         }
                     }
-                    
                 }
             }
             Spacer()
-    
         }
         Spacer()
-       
-    }
-    private func getSelectedDepartment(value: Int){
-        var culmulativeTotal = 0
-        _ = allPatientsSeen.first { department in
-            culmulativeTotal += Int(department.total)
-            if value <= culmulativeTotal{
-                selectedDepartment = department
-                return true
-            }
-            return false
-        }
     }
 }
 

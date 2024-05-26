@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct TestingView: View {
+struct HomeSummaryView: View {
     
     @State private var graphType: GraphType = .donut
     var body: some View {
@@ -34,5 +34,21 @@ struct TestingView: View {
 }
 
 #Preview {
-    TestingView()
+    HomeSummaryView()
+}
+
+
+enum GraphType: String, CaseIterable{
+        case bar = "Bar Chart"
+        case pie = "Pie Chart"
+        case donut = "Donut Chart"
+}
+
+
+enum Department: String, CaseIterable{
+    case opthalmology = "Opthalmology"
+    case cardiology = "Cardiology"
+    case gastroerolgy = "Gastroerolgy"
+    case surgery = "Surgery"
+    case neurology = "Neurology"
 }

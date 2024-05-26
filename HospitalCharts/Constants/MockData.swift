@@ -19,11 +19,21 @@ struct MockData{
 
     ]
     
+    // Summary View
     
+    
+//    static let allPatientsSeenSummary: [PatientsSeen] = [
+//        .init(total: 325, department: .opthalmology),
+//        .init(total: 255, department: .cardiology),
+//        .init(total: 121, department: .gastroerolgy),
+//        .init(total: 89, department: .neurology),
+//        .init(total: 73, department: .surgery)
+//    ]
    
     
+   
 
-    
+    // For A and E Line Chart View
     
     static let AandE2020 = [AccidentAndEmergency(totalNumber: 394, month: "Jan", year: "2020"),
                             AccidentAndEmergency(totalNumber: 312, month: "Feb", year: "2020"),
@@ -80,5 +90,23 @@ struct MockData{
                             AccidentAndEmergency(totalNumber: 312, month: "Nov", year: "2023"),
                             AccidentAndEmergency(totalNumber: 469, month: "Dec", year: "2023")
     ]
+    
+    // For summary View
+    
+//    static let allPatientsSeen: [PatientsSeen] = [
+//        .init(total: 255, department: .cardiology),
+//        .init(total: 121, department: .gastroerolgy),
+//        .init(total: 89, department: .neurology),
+//        .init(total: 325, department: .opthalmology),
+//        .init(total: 73, department: .surgery)
+//    ]
+//    
+        static let allPatientsSeen: [PatientsSeen] = [
+            .init(total: 325, department: .opthalmology),
+            .init(total: 255, department: .cardiology),
+            .init(total: 121, department: .gastroerolgy),
+            .init(total: 89, department: .neurology),
+            .init(total: 73, department: .surgery)
+        ]
     
 }
