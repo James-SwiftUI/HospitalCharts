@@ -91,6 +91,49 @@ struct MockData{
                             AccidentAndEmergency(totalNumber: 469, date: createDate(year: 2023, month: 12, day: 01)!)
     ]
     
+    
+    static let AandEThisWeek = [
+        AccidentAndEmergency(totalNumber: 6, date: createDateAndTime(day: 1, hour: 1, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 9, date: createDateAndTime(day: 1, hour: 1, minute: 30)!),
+        AccidentAndEmergency(totalNumber: 7, date: createDateAndTime(day: 1, hour: 2, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 11, date: createDateAndTime(day: 1, hour: 2, minute: 30)!),
+        AccidentAndEmergency(totalNumber: 5, date: createDateAndTime(day: 1, hour: 3, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 8, date: createDateAndTime(day: 1, hour: 3, minute: 30)!),
+        AccidentAndEmergency(totalNumber: 12, date: createDateAndTime(day: 1, hour: 4, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 12, date: createDateAndTime(day: 1, hour: 4, minute: 30)!),
+        AccidentAndEmergency(totalNumber: 9, date: createDateAndTime(day: 1, hour: 5, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 11, date: createDateAndTime(day: 1, hour: 5, minute: 30)!),
+        AccidentAndEmergency(totalNumber: 12, date: createDateAndTime(day: 1, hour: 6, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 20, date: createDateAndTime(day: 1, hour: 6, minute: 30)!),
+        AccidentAndEmergency(totalNumber: 14, date: createDateAndTime(day: 1, hour: 7, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 10, date: createDateAndTime(day: 1, hour: 7, minute: 30)!),
+        AccidentAndEmergency(totalNumber: 17, date: createDateAndTime(day: 1, hour: 8, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 15, date: createDateAndTime(day: 1, hour: 8, minute: 30)!),
+        AccidentAndEmergency(totalNumber: 10, date: createDateAndTime(day: 1, hour: 9, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 20, date: createDateAndTime(day: 1, hour: 9, minute: 30)!),
+        AccidentAndEmergency(totalNumber: 10, date: createDateAndTime(day: 1, hour: 10, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 19, date: createDateAndTime(day: 1, hour: 10, minute: 30)!),
+        AccidentAndEmergency(totalNumber: 11, date: createDateAndTime(day: 1, hour: 11, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 22, date: createDateAndTime(day: 1, hour: 11, minute: 30)!),
+        AccidentAndEmergency(totalNumber: 13, date: createDateAndTime(day: 1, hour: 12, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 16, date: createDateAndTime(day: 1, hour: 12, minute: 30)!),
+        AccidentAndEmergency(totalNumber: 10, date: createDateAndTime(day: 1, hour: 13, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 9, date: createDateAndTime(day: 1, hour: 13, minute: 30)!),
+        AccidentAndEmergency(totalNumber: 14, date: createDateAndTime(day: 1, hour: 14, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 24, date: createDateAndTime(day: 1, hour: 14, minute: 30)!),
+        AccidentAndEmergency(totalNumber: 13, date: createDateAndTime(day: 1, hour: 15, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 14, date: createDateAndTime(day: 1, hour: 15, minute: 30)!),
+        AccidentAndEmergency(totalNumber: 12, date: createDateAndTime(day: 1, hour: 16, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 17, date: createDateAndTime(day: 1, hour: 16, minute: 30)!),
+        AccidentAndEmergency(totalNumber: 21, date: createDateAndTime(day: 1, hour: 17, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 12, date: createDateAndTime(day: 1, hour: 17, minute: 30)!),
+        AccidentAndEmergency(totalNumber: 15, date: createDateAndTime(day: 1, hour: 18, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 19, date: createDateAndTime(day: 1, hour: 18, minute: 30)!),
+        AccidentAndEmergency(totalNumber: 9, date: createDateAndTime(day: 1, hour: 19, minute: 0)!),
+        AccidentAndEmergency(totalNumber: 14, date: createDateAndTime(day: 1, hour: 19, minute: 30)!),
+    ]
+    
+    
     // For summary View
     
     //    static let allPatientsSeen: [PatientsSeen] = [
@@ -120,6 +163,20 @@ struct MockData{
         return calendar.date(from: components)
     }
     
+    
+    static func createDateAndTime(day: Int, hour: Int, minute: Int) -> Date?{
+        var components = DateComponents()
+        components.year = 2024
+        components.month = 5
+        
+        components.day = day
+        components.hour = hour
+        components.minute = minute
+        
+        let calendar = Calendar.current
+        return calendar.date(from: components)
+        
+    }
     
    
     

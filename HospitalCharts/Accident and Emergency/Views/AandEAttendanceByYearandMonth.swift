@@ -59,15 +59,9 @@ struct AandEAttendanceByYearandMonth: View {
                             .lineStyle(StrokeStyle(lineWidth: 3))
                         }
                         
-                        
-                        
-                        
                     }
-                    .padding(.horizontal)
+                    .padding(.horizontal, 8)
                     .chartXSelection(value: $selectedMonthOnChart)
-                    .chartXAxis{
-                        AxisMarks{}
-                    }
                     .chartYScale(domain: .automatic(includesZero: false))
 //                    .chartYAxis{
 //                        AxisMarks(values: [250, 350, 450, 550]){

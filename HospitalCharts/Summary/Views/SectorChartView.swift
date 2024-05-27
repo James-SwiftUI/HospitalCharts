@@ -23,25 +23,15 @@ struct SectorChartView: View {
                     SectorMark(angle: .value("All patients seen", item.total),
                                innerRadius: .ratio(graphType == .donut ? 0.6 : 0),
                                outerRadius: selectedDepartment?.department.rawValue == item.department.rawValue ? 175 : 150,
-                               angularInset: graphType == .donut ? 4 : 1
+                               angularInset: graphType == .donut ? 4 : 1.5
                               )
                               .foregroundStyle(by: .value("All patients seen", item.department.rawValue))
                               .cornerRadius(8)
+                        
                     
                 }
             }
             .chartAngleSelection(value: $selectedNumberOfPatients)
-            .onChange(of: selectedNumberOfPatients) { oldValue, newValue in
-                if let newValue{
-                    // Culmative total
-                    
-                    print(newValue)
-                    withAnimation {
-                        //getSelectedDepartment(value: newValue)
-                        //print(selectedDepartment?.department.rawValue)
-                    }
-                }
-            }
             .frame(height: 350)
             .padding(.top, 30)
             .chartBackground{ _ in
