@@ -60,17 +60,20 @@ struct AandEAttendanceByYearandMonth: View {
                         }
                         
                     }
-                    .padding(.horizontal, 8)
+                    .padding(.horizontal, 10)
                     .chartXSelection(value: $selectedMonthOnChart)
                     .chartYScale(domain: .automatic(includesZero: false))
-//                    .chartYAxis{
-//                        AxisMarks(values: [250, 350, 450, 550]){
-//                            AxisGridLine()
-//                        }
-//                    }
+                    .chartXAxis{}
+                    .chartYAxis{
+                        AxisMarks{ value in
+                            AxisValueLabel()
+                        }
+                        
+                    }
                     .aspectRatio(1, contentMode: .fit)
                     .frame(height: frameHeight)
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, 18)
+                    
                 }header: {
                     if !isThumbalView{
                         Divider()

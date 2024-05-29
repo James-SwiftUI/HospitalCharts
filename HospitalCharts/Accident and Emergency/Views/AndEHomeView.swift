@@ -74,7 +74,7 @@ struct AndEHomeView: View {
                 Section{
                     
                     NavigationLink{
-                        AandEAttendanceByYearandMonth(isThumbalView: false, frameHeight: 400.0)
+                        AandEAttendanceByYearandMonth(isThumbalView: false, frameHeight: 420.0)
                     }label: {
                         VStack(alignment: .leading){
                             AandEAttendanceByYearandMonth(isThumbalView: true, frameHeight: 320.0)

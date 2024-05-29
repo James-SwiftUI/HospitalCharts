@@ -36,17 +36,17 @@ struct MockData{
     // For A and E Line Chart View
     
     static let AandE2020 = [AccidentAndEmergency(totalNumber: 394, date: createDate(year: 2020, month: 1, day: 01)!),
-                            AccidentAndEmergency(totalNumber: 312, date: createDate(year: 2020, month: 2, day: 01)!),
+                            AccidentAndEmergency(totalNumber: 322, date: createDate(year: 2020, month: 2, day: 01)!),
                             AccidentAndEmergency(totalNumber: 469, date: createDate(year: 2020, month: 3, day: 01)!),
-                            AccidentAndEmergency(totalNumber: 284, date: createDate(year: 2020, month: 4, day: 01)!),
+                            AccidentAndEmergency(totalNumber: 340, date: createDate(year: 2020, month: 4, day: 01)!),
                             AccidentAndEmergency(totalNumber: 431, date: createDate(year: 2020, month: 5, day: 01)!),
-                            AccidentAndEmergency(totalNumber: 495, date: createDate(year: 2020, month: 6, day: 01)!),
+                            AccidentAndEmergency(totalNumber: 465, date: createDate(year: 2020, month: 6, day: 01)!),
                             AccidentAndEmergency(totalNumber: 372, date: createDate(year: 2020, month: 7, day: 01)!),
                             AccidentAndEmergency(totalNumber: 338, date: createDate(year: 2020, month: 8, day: 01)!),
                             AccidentAndEmergency(totalNumber: 417, date: createDate(year: 2020, month: 9, day: 01)!),
                             AccidentAndEmergency(totalNumber: 459, date: createDate(year: 2020, month: 10, day: 01)!),
                             AccidentAndEmergency(totalNumber: 386, date: createDate(year: 2020, month: 11, day: 01)!),
-                            AccidentAndEmergency(totalNumber: 493, date: createDate(year: 2020, month: 12, day: 01)!)
+                            AccidentAndEmergency(totalNumber: 452, date: createDate(year: 2020, month: 12, day: 01)!)
     ]
     
     static let AandE2021 = [AccidentAndEmergency(totalNumber: 493, date: createDate(year: 2021, month: 1, day: 01)!),
@@ -94,43 +94,32 @@ struct MockData{
     
     static let AandEThisWeek = [
         AccidentAndEmergency(totalNumber: 6, date: createDateAndTime(day: 1, hour: 1, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 9, date: createDateAndTime(day: 1, hour: 1, minute: 30)!),
         AccidentAndEmergency(totalNumber: 7, date: createDateAndTime(day: 1, hour: 2, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 11, date: createDateAndTime(day: 1, hour: 2, minute: 30)!),
         AccidentAndEmergency(totalNumber: 5, date: createDateAndTime(day: 1, hour: 3, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 8, date: createDateAndTime(day: 1, hour: 3, minute: 30)!),
         AccidentAndEmergency(totalNumber: 12, date: createDateAndTime(day: 1, hour: 4, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 12, date: createDateAndTime(day: 1, hour: 4, minute: 30)!),
         AccidentAndEmergency(totalNumber: 9, date: createDateAndTime(day: 1, hour: 5, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 11, date: createDateAndTime(day: 1, hour: 5, minute: 30)!),
         AccidentAndEmergency(totalNumber: 12, date: createDateAndTime(day: 1, hour: 6, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 20, date: createDateAndTime(day: 1, hour: 6, minute: 30)!),
         AccidentAndEmergency(totalNumber: 14, date: createDateAndTime(day: 1, hour: 7, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 10, date: createDateAndTime(day: 1, hour: 7, minute: 30)!),
         AccidentAndEmergency(totalNumber: 17, date: createDateAndTime(day: 1, hour: 8, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 15, date: createDateAndTime(day: 1, hour: 8, minute: 30)!),
         AccidentAndEmergency(totalNumber: 10, date: createDateAndTime(day: 1, hour: 9, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 20, date: createDateAndTime(day: 1, hour: 9, minute: 30)!),
         AccidentAndEmergency(totalNumber: 10, date: createDateAndTime(day: 1, hour: 10, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 19, date: createDateAndTime(day: 1, hour: 10, minute: 30)!),
         AccidentAndEmergency(totalNumber: 11, date: createDateAndTime(day: 1, hour: 11, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 22, date: createDateAndTime(day: 1, hour: 11, minute: 30)!),
         AccidentAndEmergency(totalNumber: 13, date: createDateAndTime(day: 1, hour: 12, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 16, date: createDateAndTime(day: 1, hour: 12, minute: 30)!),
+       
         AccidentAndEmergency(totalNumber: 10, date: createDateAndTime(day: 1, hour: 13, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 9, date: createDateAndTime(day: 1, hour: 13, minute: 30)!),
+       
         AccidentAndEmergency(totalNumber: 14, date: createDateAndTime(day: 1, hour: 14, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 24, date: createDateAndTime(day: 1, hour: 14, minute: 30)!),
+
         AccidentAndEmergency(totalNumber: 13, date: createDateAndTime(day: 1, hour: 15, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 14, date: createDateAndTime(day: 1, hour: 15, minute: 30)!),
+        
         AccidentAndEmergency(totalNumber: 12, date: createDateAndTime(day: 1, hour: 16, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 17, date: createDateAndTime(day: 1, hour: 16, minute: 30)!),
+    
         AccidentAndEmergency(totalNumber: 21, date: createDateAndTime(day: 1, hour: 17, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 12, date: createDateAndTime(day: 1, hour: 17, minute: 30)!),
+       
         AccidentAndEmergency(totalNumber: 15, date: createDateAndTime(day: 1, hour: 18, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 19, date: createDateAndTime(day: 1, hour: 18, minute: 30)!),
+
         AccidentAndEmergency(totalNumber: 9, date: createDateAndTime(day: 1, hour: 19, minute: 0)!),
-        AccidentAndEmergency(totalNumber: 14, date: createDateAndTime(day: 1, hour: 19, minute: 30)!),
+  
     ]
     
     

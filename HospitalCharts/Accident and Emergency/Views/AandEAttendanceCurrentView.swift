@@ -3,6 +3,10 @@ import Charts
 
 
 struct AandEAttendanceCurrentView: View {
+    
+    
+    
+    
     var body: some View {
         VStack {
             Text("A and E Attendance Today")
@@ -12,12 +16,21 @@ struct AandEAttendanceCurrentView: View {
             Chart(MockData.AandEThisWeek){ item in
                 BarMark(x: .value("Day", item.date, unit: .hour), y: .value("Total Attendances", item.totalNumber))
             }
+            .chartXAxis{
+                AxisMarks(values: .stride(by: .hour)) {
+                    AxisValueLabel(format: .dateTime.hour(), centered: true)
+                }
+            }
             .padding(.horizontal, 8)
             .frame(height: 350)
             Spacer()
             
         }
     }
+    
+  
+    
+   
 }
 
 #Preview {
