@@ -38,6 +38,7 @@ The hospitals in this app are fictitious data used for the charts is generated a
 <p align="center">
     <img alt="The A and E home view with a selection of charts and the current status" src="./Photos/AandEAttendanceHome1.png", width="200"/>
     <img alt="The A and E home with with furhter charts that can navigate to a full screen view" src="./Photos/AandEAttendanceHome2.png", width="200"/>
+    <img alt="A bar chart with the most recent hours with the numbers of patients attending A and E" src="./Photos/AandAttendanceOverTime", width="200"/>
     <img alt="A line chart that provides a histroical infomation of number attendances by month over a 4 year peroid" src="./Photos/AandEAttedanceLineChart.png", width="200"/>
-   <img alt="A stacked bar chart with mode of arrival over 3 months e.g walk ins ambulance" src="./Photos/AandAttendanceModeOfArrival.png", width="200"/>
+   <img alt="A stacked bar chart with mode of arrival over 3 months e.g walk ins ambulance" src="./Photos/AandEAttendanceModeOfArrival.png", width="200"/>
 </p>

@@ -280,8 +280,8 @@
 			children = (
 				1A1CE5FF2BF907060006D920 /* Subview */,
 				1AAEC3C62BEFB7CC0001F280 /* AndEHomeView.swift */,
-				1AF4739A2B790338000746C8 /* ArrivalAttendanceBarChartView.swift */,
 				1A1CE6002BF91EF00006D920 /* AandEAttendanceCurrentView.swift */,
+				1AF4739A2B790338000746C8 /* ArrivalAttendanceBarChartView.swift */,
 				1A1417422B6EC16F007EFCB7 /* AandEAttendanceByYearandMonth.swift */,
 			);
 			path = Views;

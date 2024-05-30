@@ -23,6 +23,10 @@ struct AandEAttendanceCurrentView: View {
             }
             .padding(.horizontal, 8)
             .frame(height: 350)
+            HStack{
+                Text("Attendance Over time")
+                    .font(.headline.monospaced())
+            }
             Spacer()
             
         }

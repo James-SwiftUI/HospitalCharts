@@ -9,9 +9,6 @@ struct AndEHomeView: View {
     @State private var hospitalChoice = 0
     
     var body: some View {
-        
-    
-        
         NavigationStack{
             List{
                 Section {
@@ -92,8 +89,6 @@ struct AndEHomeView: View {
                         }
                         .padding()
                     }
-                    
-                    
                     NavigationLink{
                         ArrivalAttendanceBarChartView(showTheLegend: true, frameHeight: 400)
                             
@@ -107,8 +102,6 @@ struct AndEHomeView: View {
                                 )
                                 .chartXAxis{}
                                 .chartYAxis{}
-                               
-                            
                             Text("View mode of arrival")
                                 .font(.caption)
                                 .padding(.horizontal, 12)
@@ -116,11 +109,6 @@ struct AndEHomeView: View {
                         }
                         .padding()
                     }
-                    
-                    
-                    
-                    
-                    
                 }header: {
                     Text("Historical Attendance")
                 }
