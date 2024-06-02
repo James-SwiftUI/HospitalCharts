@@ -26,8 +26,10 @@ struct BarChartView: View {
                 }
                 
             }
-            .frame(height: 450)
+            .frame(height: 380)
+            .chartLegend(Visibility.hidden)
             .chartXSelection(value: $selectedDepartment)
+            
             .chartXAxis{
                 AxisMarks{}
             }
@@ -39,6 +41,7 @@ struct BarChartView: View {
                    AxisValueLabel{}
                 }
             }
+            ChartLegendView()
         }
             
         

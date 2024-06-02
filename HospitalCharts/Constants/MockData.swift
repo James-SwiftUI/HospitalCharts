@@ -134,13 +134,13 @@ struct MockData{
     //    ]
     //
     static let allPatientsSeen: [PatientsSeen] = [
-        .init(total: 325, department: .opthalmology),
-        .init(total: 255, department: .cardiology),
-        .init(total: 121, department: .gastroerolgy),
-        .init(total: 89, department: .neurology),
-        .init(total: 73, department: .surgery)
+        .init(total: 325, department: .opthalmology, color: .blue),
+        .init(total: 255, department: .cardiology, color: .green),
+        .init(total: 121, department: .gastroerolgy, color: .orange),
+        .init(total: 89, department: .neurology, color: .purple),
+        .init(total: 73, department: .surgery, color: .red)
     ]
-    
+
     
     static func createDate(year: Int, month: Int, day: Int) -> Date? {
         var components = DateComponents()

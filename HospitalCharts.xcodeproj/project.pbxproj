@@ -17,6 +17,7 @@
 		1A32E45D2B67F5F800AE030B /* CommunityDepartmentChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A32E45C2B67F5F800AE030B /* CommunityDepartmentChartView.swift */; };
 		1A32E4612B67FFD400AE030B /* HospitalHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A32E4602B67FFD400AE030B /* HospitalHeaderView.swift */; };
 		1A32E4632B6820D200AE030B /* DepartmentLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A32E4622B6820D200AE030B /* DepartmentLink.swift */; };
+		1A33ADEC2C0C9BA10001AD1C /* ChartLegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A33ADEB2C0C9BA10001AD1C /* ChartLegendView.swift */; };
 		1A6C7E9A2B7FDE4C000D14DA /* HomeSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C7E992B7FDE4C000D14DA /* HomeSummaryView.swift */; };
 		1A9836D52C0357E500769A8C /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9836D42C0357E500769A8C /* Route.swift */; };
 		1A9836D72C0357ED00769A8C /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9836D62C0357ED00769A8C /* NavigationRouter.swift */; };
@@ -52,6 +53,7 @@
 		1A32E45C2B67F5F800AE030B /* CommunityDepartmentChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDepartmentChartView.swift; sourceTree = "<group>"; };
 		1A32E4602B67FFD400AE030B /* HospitalHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalHeaderView.swift; sourceTree = "<group>"; };
 		1A32E4622B6820D200AE030B /* DepartmentLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentLink.swift; sourceTree = "<group>"; };
+		1A33ADEB2C0C9BA10001AD1C /* ChartLegendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartLegendView.swift; sourceTree = "<group>"; };
 		1A6C7E992B7FDE4C000D14DA /* HomeSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSummaryView.swift; sourceTree = "<group>"; };
 		1A9836D42C0357E500769A8C /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		1A9836D62C0357ED00769A8C /* NavigationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
@@ -118,6 +120,14 @@
 			children = (
 				1A32E4602B67FFD400AE030B /* HospitalHeaderView.swift */,
 				1A32E4622B6820D200AE030B /* DepartmentLink.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		1A33ADEA2C0C9B940001AD1C /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				1A33ADEB2C0C9BA10001AD1C /* ChartLegendView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -251,6 +261,7 @@
 		1AF168452B45A6D8003231A2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1A33ADEA2C0C9B940001AD1C /* Subviews */,
 				1A6C7E992B7FDE4C000D14DA /* HomeSummaryView.swift */,
 				1A26B8B72B6A75610022B97F /* BarChartView.swift */,
 				1AEAECFF2C02576D00FB299D /* SectorChartView.swift */,
@@ -377,6 +388,7 @@
 				1AF168562B45B8F1003231A2 /* CommunityDetailView.swift in Sources */,
 				1A26B8B22B6A626C0022B97F /* CommunityBedsChartView.swift in Sources */,
 				1AEAED002C02576D00FB299D /* SectorChartView.swift in Sources */,
+				1A33ADEC2C0C9BA10001AD1C /* ChartLegendView.swift in Sources */,
 				1AF168522B45B873003231A2 /* CommunityDepartment.swift in Sources */,
 				1AF1682C2B45A2A2003231A2 /* ContentView.swift in Sources */,
 				1AF168382B45A31D003231A2 /* TrustHospitalsView.swift in Sources */,

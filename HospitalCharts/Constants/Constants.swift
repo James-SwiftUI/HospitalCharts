@@ -1,5 +1,5 @@
 import Foundation
-
+import SwiftUI
 
 
 let monthSelection = ["Mar", "Apr", "May"]
@@ -15,4 +15,5 @@ struct PatientsSeen: Identifiable{
     var id = UUID()
     var total: Int
     var department: Department
+    var color: Color
 }
